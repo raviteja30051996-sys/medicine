@@ -1,0 +1,85 @@
+/* src/components/LogoImage.css */
+.logo-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.logo-image {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.logo-line {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.logo-letter-c, .logo-letter-s {
+  font-size: 32px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.logo-letter-s {
+  color: #ffdd00;
+}
+
+.logo-divider {
+  font-size: 28px;
+  color: #ff6b35;
+  margin: 0 5px;
+  font-weight: 300;
+}
+
+.logo-text-ure {
+  font-size: 28px;
+  color: #ffdd00;
+  letter-spacing: 1px;
+}
+
+.logo-text-are {
+  font-size: 28px;
+  color: #a3d0ff;
+  letter-spacing: 1px;
+}
+
+.logo-text-surgery {
+  font-size: 28px;
+  color: #ffb347;
+  letter-spacing: 1px;
+}
+
+.logo-tagline {
+  font-size: 14px;
+  font-style: italic;
+  color: #e6f2ff;
+  text-align: center;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .logo-letter-c, .logo-letter-s {
+    font-size: 24px;
+  }
+  
+  .logo-divider {
+    font-size: 22px;
+  }
+  
+  .logo-text-ure,
+  .logo-text-are,
+  .logo-text-surgery {
+    font-size: 22px;
+  }
+  
+  .logo-tagline {
+    font-size: 12px;
+  }
+}

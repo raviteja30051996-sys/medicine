@@ -1,0 +1,261 @@
+/* src/components/Surgeries.css */
+.surgeries {
+  background-color: white;
+}
+
+.surgeries-section,
+.specialities-section {
+  margin-bottom: 80px;
+}
+
+.surgeries-section:last-child,
+.specialities-section:last-child {
+  margin-bottom: 0;
+}
+
+.surgeries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.surgery-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.surgery-card:hover {
+  transform: translateY(-8px);
+  border-color: #1a6fb3;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.surgery-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.surgery-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d4d8d;
+  margin-bottom: 8px;
+}
+
+.surgery-category {
+  font-size: 12px;
+  font-weight: 500;
+  color: #666;
+  padding: 4px 12px;
+  background: #e6f2ff;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.view-more-container {
+  text-align: center;
+}
+
+/* Specialities Styles */
+.specialities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.speciality-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.speciality-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--speciality-color, #0d4d8d);
+  transition: width 0.3s ease;
+}
+
+.speciality-card:hover::before {
+  width: 10px;
+}
+
+.speciality-card:hover {
+  transform: translateY(-8px);
+  background: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-color: var(--speciality-color, #0d4d8d);
+}
+
+.speciality-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.speciality-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.speciality-card:hover .speciality-icon {
+  transform: scale(1.1);
+}
+
+.speciality-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.speciality-description {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.speciality-btn {
+  background: none;
+  border: none;
+  color: var(--speciality-color, #0d4d8d);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.speciality-btn:hover {
+  gap: 10px;
+  color: #333;
+}
+
+@media (max-width: 1200px) {
+  .surgeries-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .specialities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .surgeries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .surgeries-section,
+  .specialities-section {
+    margin-bottom: 60px;
+  }
+  
+  .surgeries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .specialities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .surgery-card {
+    padding: 20px 15px;
+  }
+  
+  .surgery-icon {
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .surgery-name {
+    font-size: 16px;
+  }
+  
+  .speciality-card {
+    padding: 25px;
+  }
+  
+  .speciality-header {
+    gap: 15px;
+  }
+  
+  .speciality-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+  
+  .speciality-title {
+    font-size: 20px;
+  }
+  
+  .speciality-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .surgeries-grid {
+    grid-template-columns: 1fr;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .speciality-card {
+    padding: 20px;
+  }
+  
+  .speciality-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}

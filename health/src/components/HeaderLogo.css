@@ -1,0 +1,114 @@
+/* src/components/HeaderLogo.css */
+
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 50px;
+}
+
+/* Logo Image Container */
+.header-logo-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+/* Logo Image - Small size */
+.clinic-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.clinic-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Clinic Name Container */
+.clinic-name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+/* Main Clinic Name */
+.clinic-name-main {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a365d;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* Tagline */
+.clinic-tagline {
+  font-size: 11px;
+  font-weight: 500;
+  color: #4299e1;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-logo-container {
+    gap: 10px;
+    height: 45px;
+  }
+  
+  .header-logo-image {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .clinic-logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .clinic-name-main {
+    font-size: 15px;
+  }
+  
+  .clinic-tagline {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo-container {
+    gap: 8px;
+    height: 40px;
+  }
+  
+  .header-logo-image {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .clinic-logo {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .clinic-name-main {
+    font-size: 14px;
+  }
+  
+  .clinic-tagline {
+    font-size: 9px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
